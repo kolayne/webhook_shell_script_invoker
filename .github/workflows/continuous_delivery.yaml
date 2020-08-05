@@ -12,4 +12,5 @@ jobs:
         run: |
           curl --silent --show-error --fail -X POST ${{ secrets.DEPLOYMENT_SERVER }} \
           -H 'Authorization: ${{ secrets.DEPLOYMENT_TOKEN }}' -H 'Content-Type: application/json' \
-          -d '{"project_name": "webhook_shell_invoker"}'
+          -d '{"project_name": "webhook_shell_invoker"}' \
+          || if [ "$?" -eq 52 ]; then true; else false; fi # Ignore empty reply from server (self-restart)
