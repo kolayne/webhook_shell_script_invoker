@@ -1,0 +1,15 @@
+name: Deliver on master push
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  deliver:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Send notification to server
+        run: |
+          curl --silent --show-error --fail -X POST ${{ secrets.DEPLOYMENT_SERVER }} \
+          -H 'Authorization: ${{ secrets.DEPLOYMENT_TOKEN }}' -H 'Content-Type: application/json' \
+          -d '{"project_name": "webhook_shell_invoker"}'
