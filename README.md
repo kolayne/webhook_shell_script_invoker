@@ -1,4 +1,7 @@
 # Webhook Shell Invoker
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c6e62c7d7264d7f8a5723e636699dde)](https://app.codacy.com/manual/kolayne/webhook_shell_invoker?utm_source=github.com&utm_medium=referral&utm_content=kolayne/webhook_shell_invoker&utm_campaign=Badge_Grade_Dashboard)
+
 Simple tool for running shell scripts on webhook events
 
 ## Usage
