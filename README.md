@@ -16,3 +16,10 @@ Simple tool for running shell scripts on webhook events
     Example is in `example_config.py`
 
 3.  Run `python3 main.py`
+
+## Request
+
+Default port is `2010`. Post HTTP requests to `/` with header `Authorization` set to the authorization secret key from `config.py` and json body with key `project_name` set to name of a project (key of `projects_to_scripts` from `config.py`) are accepted. Example with curl:
+```bash
+curl --fail http://localhost:2010 -H "Content-Type: application/json" -H "Authorization: ujeiuqeojqnbijnzlkjcoqituqioenuiniuf" --data '{"project_name": "project_name_1"}'
+```
