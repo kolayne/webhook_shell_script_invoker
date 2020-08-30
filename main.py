@@ -13,12 +13,15 @@ app = flask.Flask(__name__)
 def index():
     if flask.request.headers.get('Authorization') != secret_token:
         return flask.abort(401)
+
     project_name = flask.request.json.get("project_name")
     if project_name is None:
         return flask.abort(400)
+
     script_name = projects_to_scripts.get(project_name)
     if script_name is None:
         return flask.abort(404)
+
     try:
         subprocess.run([path.join('scripts/', script_name)], check=True)
     except subprocess.CalledProcessError:
