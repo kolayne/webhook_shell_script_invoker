@@ -6,7 +6,7 @@ curl --silent --show-error --fail -X POST "$deployment_server" \
 exit_code=$?
 
 if [[ exit_code -eq 52 ]]; then
-  exit 0
+  exit 0  # Ignoring empty reply from server (self-restart)
 else
   exit $exit_code
 fi
