@@ -11,6 +11,7 @@ jobs:
       deployment_server: ${{ secrets.DEPLOYMENT_SERVER1 }}
       deployment_token: ${{ secrets.DEPLOYMENT_TOKEN1 }}
     steps:
+      - uses: actions/checkout@v2
       - name: Webhook
         run: ./deploy_request.sh
         working-directory: .github/workflows/
@@ -21,6 +22,7 @@ jobs:
       deployment_server: ${{ secrets.DEPLOYMENT_SERVER2 }}
       deployment_token: ${{ secrets.DEPLOYMENT_TOKEN2 }}
     steps:
+      - uses: actions/checkout@v2
       - name: Webhook
         run: ./deploy_request.sh
         working-directory: .github/workflows/
