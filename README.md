@@ -5,7 +5,9 @@
 Simple tool for running shell scripts on webhook events. A simple sample use case is Github Actions: send request from
 a deploy action to a server with WSI (this project) running to easily run a deploy script
 
-## Usage
+## Usage (server)
+
+To set up a requests acceptor on a server, follow these steps:
 
 1.  Create scripts inside `scripts/` directory and make them runnable (`chmod +x`)
 
@@ -20,11 +22,11 @@ a deploy action to a server with WSI (this project) running to easily run a depl
 
 3.  Run `python3 main.py`
 
-## Request
+## Usage (client)
 
 Default port is `2010`. Post HTTP requests to `/` with header `Authorization` set to the authorization secret key from
 `config.py` and json body with key `project_name` set to name of a project (key of `projects_to_scripts`
-from `config.py`) are accepted. Example with curl:
+from `config.py`) are accepted. You can send it in any way. Example with curl:
 ```bash
 curl --fail http://localhost:2010 -H "Content-Type: application/json" \
         -H "Authorization: password12345" \
