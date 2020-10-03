@@ -1,6 +1,6 @@
 # Webhook Shell Invoker
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c6e62c7d7264d7f8a5723e636699dde)](https://app.codacy.com/manual/kolayne/webhook_shell_invoker?utm_source=github.com&utm_medium=referral&utm_content=kolayne/webhook_shell_invoker&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/204dc5924bdb413280ba7a566e4040c6)](https://www.codacy.com/gh/kolayne/webhook_shell_invoker/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kolayne/webhook_shell_invoker&amp;utm_campaign=Badge_Grade)
 
 Simple tool for running shell scripts on webhook events. A simple sample use case is Github Actions: send request from
 a deploy action to a server with WSI (this project) running to easily run a deploy script
