@@ -1,5 +1,6 @@
 # Webhook Shell Invoker
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/aa6de264cff84015905247f86ef3c232)](https://app.codacy.com/gh/kolayne/webhook_shell_script_invoker?utm_source=github.com&utm_medium=referral&utm_content=kolayne/webhook_shell_script_invoker&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/204dc5924bdb413280ba7a566e4040c6)](https://www.codacy.com/gh/kolayne/webhook_shell_invoker/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kolayne/webhook_shell_invoker&amp;utm_campaign=Badge_Grade)
 
 Simple tool for running shell scripts on webhook events. A simple sample use case is Github Actions: send request from
